@@ -34,7 +34,7 @@ class URLShortner(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, short_url):
-        short_url = "arg2e.dom/" + short_url
+        short_url = "app/arg2e.dom/" + short_url
         url = Link.objects.get(short_url=short_url).url
         return HttpResponseRedirect(redirect_to=url)
 
